@@ -1,0 +1,219 @@
+/* Root variables for colors */
+:root {
+  --primary-color: #FF885B; /* Orange for primary elements like header */
+  --accent-color: #FFE5CF; /* Cream for background and accents */
+  --background-color: #FFE5CF; /* Cream background */
+  --footer-background-color: #33372C; /* Dark green for footer */
+  --text-color: #33372C; /* Dark green for main text */
+  --header-text-color: #FFFFFF; /* White text for header */
+  --highlight-color: #557C56; /* Green for buttons and links */
+  --transition-duration: 0.3s; /* Transition duration for animations */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: var(--primary-color);
+  z-index: 1000;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-duration);
+}
+
+.header.scrolled {
+  background-color: var(--footer-background-color);
+}
+
+.brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8em;
+  color: var(--header-text-color);
+}
+
+nav a {
+  color: var(--header-text-color); /* Initial color */
+  text-decoration: none; /* No underline by default */
+  margin-left: 25px;
+  font-size: 1.1em;
+  transition: color var(--transition-duration), text-decoration var(--transition-duration);
+}
+
+nav a:hover {
+  color: var(--highlight-color); /* Change color on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.video-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8); /* Light overlay for readability */
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: var(--text-color);
+  font-family: 'Pacifico', cursive;
+  font-size: 4em;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  transition: font-size var(--transition-duration), top var(--transition-duration);
+}
+
+.video-overlay.minimized {
+  font-size: 1.8em;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: fixed;
+}
+
+.btn-jump {
+  position: absolute;
+  top: calc(50% + 100px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--highlight-color);
+  color: #FFFFFF;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color var(--transition-duration), transform var(--transition-duration);
+}
+
+.btn-jump:hover {
+  background: #3C5B41; /* Darker green on hover */
+  transform: translateX(-50%) scale(1.08);
+}
+
+/* Curved box styling for sections */
+.curved-box {
+  background-color: var(--background-color); /* Match box color to background */
+  border: 2px solid var(--primary-color); /* Border using primary color */
+  border-radius: 15px; /* Rounded corners */
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+
+section {
+  padding: 80px 30px;
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+form label {
+  font-size: 1.1em;
+  color: var(--text-color);
+}
+
+form input[type="email"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #FFFFFF;
+}
+
+form button[type="submit"] {
+  background: var(--highlight-color);
+  color: var(--header-text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 15px;
+  transition: background-color var(--transition-duration);
+}
+
+form button[type="submit"]:hover {
+  background-color: #3C5B41; /* Darker green on hover */
+}
+
+footer {
+  background-color: var(--footer-background-color);
+  color: var(--accent-color);
+  text-align: center;
+  padding: 30px 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+footer ul li a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color var(--transition-duration);
+}
+
+footer ul li a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
