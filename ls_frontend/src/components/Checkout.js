@@ -1,10 +1,12 @@
 // src/components/Checkout.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import '../styles/Checkout.css'; // Import the external CSS file
 
 function Checkout({ cart }) {
-    const [user, setUser] = useState({ name: '', email: '', address: '' });
-    const [orderPlaced, setOrderPlaced] = useState(false);
+    const [user, setUser ] = useState({ name: '', email: '', address: '' });
+    const navigate = useNavigate(); // Initialize useNavigate
 
     const calculateTotal = () => {
         return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
@@ -26,43 +28,39 @@ function Checkout({ cart }) {
         try {
             const response = await axios.post('http://localhost:5000/api/orders', orderData);
             alert(`Order placed! Order ID: ${response.data._id}`);
-            setOrderPlaced(true);
+            navigate('/thank-you'); // Redirect to Thank You page using navigate
         } catch (error) {
             console.error('Error placing order:', error);
             alert('Failed to place order');
         }
     };
 
-    if (orderPlaced) {
-        return <h2>Thank you for your order!</h2>;
-    }
-
     return (
         <div className="checkout">
-            <h2>Checkout</h2>
-            <h3>Order Summary</h3>
-            <ul>
+            <h2 className="checkout-title">Checkout</h2>
+            <h3 className="order-summary-title">Order Summary</h3>
+            <ul className="order-summary">
                 {cart.map(item => (
-                    <li key={item._id}>{item.name} - Quantity: {item.quantity}</li>
+                    <li key={item._id} className="order-item">{item.name} - Quantity: {item.quantity}</li>
                 ))}
             </ul>
-            <h3>Total: ${calculateTotal()}</h3>
+            <h3 className="total-amount">Total: ₹{calculateTotal()}</h3>
 
-            <form onSubmit={handleSubmitOrder}>
-                <h3>Shipping Details</h3>
-                <label>
+            <form className="checkout-form" onSubmit={handleSubmitOrder}>
+                <h3 className="shipping-details-title">Shipping Details</h3>
+                <label className="form-label">
                     Name:
-                    <input type="text" value={user.name} onChange={(e) => setUser({ ...user, name: e.target.value })} required />
+                    <input type="text" className="form-input" value={user.name} onChange={(e) => setUser ({ ...user, name: e.target.value })} required />
                 </label>
-                <label>
+                <label className="form-label">
                     Email:
-                    <input type="email" value={user.email} onChange={(e) => setUser({ ...user, email: e.target.value })} required />
+                    <input type="email" className="form-input" value={user.email} onChange={(e) => setUser ({ ...user, email: e.target.value })} required />
                 </label>
-                <label>
+                <label className="form-label">
                     Address:
-                    <textarea value={user.address} onChange={(e) => setUser({ ...user, address: e.target.value })} required />
+                    <textarea className="form-textarea" value={user.address} onChange={(e) => setUser ({ ...user, address: e.target.value })} required />
                 </label>
-                <button type="submit">Place Order</button>
+                <button type="submit" className="submit-button">Place Order</button>
             </form>
         </div>
     );

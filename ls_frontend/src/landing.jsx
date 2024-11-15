@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-
+import foodVideo from './foodvid.mp4'; // Adjust the path based on your folder structure
 function Landing() {
   const [scrolled, setScrolled] = useState(false);
   const [minimized, setMinimized] = useState(false);
@@ -54,10 +54,10 @@ const Header = ({ scrolled }) => (
 
 const VideoSection = ({ minimized, scrollToSection }) => (
   <section className="video-container">
-    <video autoPlay muted loop playsInline className="video">
-      <source src="foodvid.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+   <video autoPlay muted loop playsInline className="video">
+  <source src={foodVideo} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
     <div className={`video-overlay ${minimized ? 'minimized' : ''}`}>
       Recipe Realm
     </div>

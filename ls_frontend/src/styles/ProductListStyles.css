@@ -1,0 +1,99 @@
+/* src/styles/ProductListStyles.css */
+
+:root {
+    --primary-color: #0056b3;         /* Primary color for text and accents */
+    --accent-color: #ffffff;          /* Background color for cards */
+    --highlight-color: #007bff;       /* Highlight color for buttons */
+    --hover-highlight-color: #0056b3; /* Hover color for buttons */
+    --border-color: #ddd;             /* Border color */
+    --text-muted: #888;               /* Muted text color */
+}
+
+/* src/styles/ProductListStyles.css or your main content CSS file */
+
+.main-content {
+    margin-top: 60px; /* Adjust height to match your header's height */
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+}
+
+.product-card {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    width: 45%; /* Controls number of items per row */
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.price {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.product-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.quantity-controls input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.quantity-controls button {
+    padding: 4px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--highlight-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--highlight-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--hover-highlight-color);
+}

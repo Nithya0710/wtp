@@ -178,7 +178,7 @@
                     orderItem.innerHTML = `
                         <p><strong>User:</strong> ${order.user.name} (${order.user.email})</p>
                         <p><strong>Address:</strong> ${order.user.address}</p>
-                        <p><strong>Total Amount:</strong> $${order.totalAmount.toFixed(2)}</p>
+                        <p><strong>Total Amount:</strong> ₹${order.totalAmount.toFixed(2)}</p>
                         <p><strong>Products:</strong><ul>${productsList}</ul></p>
                         <p><strong>Status:</strong> ${order.status}</p>
                         <button class="complete-button" onclick="completeOrder('${order._id}')">Complete Order</button>
