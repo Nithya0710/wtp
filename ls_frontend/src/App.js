@@ -52,7 +52,6 @@ function App() {
                 <header className="header">
                     <h1>Recipe Realm</h1>
                     <nav>
-                        <Link to="/products">Products</Link>
                         {!isAuthenticated ? (
                             <>
                                 <Link to="/landing">Home</Link>
@@ -61,6 +60,7 @@ function App() {
                             </>
                         ) : (
                             <>
+                                <Link to="/products">Products </Link>
                                 <Link to="/cart">Cart ({cart.length})</Link>
                                 <Link to="/checkout">Checkout</Link>
                                
