@@ -1,0 +1,76 @@
+/* Background container styles */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eaf3fc; /* Light blue background */
+}
+
+/* Signup form container (curved box) */
+.curved-box {
+    background-color: #ffffff; /* White box background */
+    border: 2px solid #d0e3f0; /* Light blue border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curved-box:hover {
+    transform: translateY(-5px); /* Hover lift effect */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}
+
+/* Typography for the heading */
+.signup-heading {
+    color: #333333;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Alert styling */
+.signup-alert {
+    margin-bottom: 16px;
+}
+
+/* Input fields */
+.signup-input {
+    background-color: white;
+    width: 100%;
+    margin: 16px 0;
+}
+
+/* Login prompt typography */
+.signup-login-prompt {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.signup-login-link {
+    color: #1976d2; /* Primary blue color */
+    text-decoration: none;
+}
+
+.signup-login-link:hover {
+    text-decoration: underline;
+}
+
+/* Signup button */
+.signup-button {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #1976d2; /* Primary blue color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.signup-button:hover {
+    background-color: #135ba1; /* Darker blue on hover */
+}

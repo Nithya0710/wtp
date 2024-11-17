@@ -87,17 +87,17 @@ nav a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  color: #FFFFFF; /* Change text color to white */
-  font-family: 'Pacifico', cursive; /* Ensure font is Pacifico */
-  font-size: 4em; /* Adjust font size as needed */
+  color: #FFFFFF;
+  font-family: 'Pacifico', cursive; 
+  font-size: 4em; 
   font-weight: bold;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Keep text shadow for better visibility */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); 
   transition: font-size var(--transition-duration), top var(--transition-duration);
 }
 
 .video-overlay.minimized {
-  font-size: 1.8em; /* Font size when minimized */
-  top: 20px; /* Position when minimized */
+  font-size: 1.8em; 
+  top: 20px; 
   left: 50%;
   transform: translate(-50%, 0);
   position: fixed;

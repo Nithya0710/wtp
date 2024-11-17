@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/ThankYou.css'; // Import the external CSS file for styling
+import '../styles/ThankYou.css'; 
 
 function ThankYou() {
     return (

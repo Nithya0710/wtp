@@ -30,14 +30,14 @@ function Signup({ onAuthSuccess }) {
                 justifyContent: 'center',
                 alignItems: 'center',
                 minHeight: '100vh',
-                bgcolor: '#F2F9FF', // Matches the light blue background in the image
+                bgcolor: '#F2F9FF', 
             }}
         >
             <Container
                 maxWidth="xs"
                 className="curved-box"
                 sx={{
-                    bgcolor: 'rgba(234, 244, 255, 0.9 )', // White box background
+                    bgcolor: 'rgba(234, 244, 255, 0.9 )', 
                     border: '2px solid #4A90E2',
                     borderRadius: 2,
                     boxShadow: 3,

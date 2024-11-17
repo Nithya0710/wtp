@@ -1,5 +1,4 @@
 /* src/styles/ProductListStyles.css */
-
 :root {
     --primary-color: #0056b3;         /* Primary color for text and accents */
     --accent-color: #ffffff;          /* Background color for cards */
@@ -9,10 +8,8 @@
     --text-muted: #888;               /* Muted text color */
 }
 
-/* src/styles/ProductListStyles.css or your main content CSS file */
-
 .main-content {
-    margin-top: 60px; /* Adjust height to match your header's height */
+    margin-top: 60px; 
 }
 
 .product-list {
@@ -30,9 +27,9 @@
     border: 1px solid var(--border-color);
     border-radius: 8px;
     background-color: var(--accent-color);
-    width: 45%; /* Controls number of items per row */
+    width: 45%; 
     max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .product-image {

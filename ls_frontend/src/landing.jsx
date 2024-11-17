@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import foodVideo from './foodvid.mp4'; // Adjust the path based on your folder structure
+import foodVideo from './foodvid.mp4';
 function Landing() {
   const [scrolled, setScrolled] = useState(false);
   const [minimized, setMinimized] = useState(false);
