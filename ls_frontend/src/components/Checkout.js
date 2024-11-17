@@ -1,8 +1,8 @@
 // src/components/Checkout.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
-import '../styles/Checkout.css'; // Import the external CSS file
+import { useNavigate } from 'react-router-dom'; 
+import '../styles/Checkout.css'; 
 
 function Checkout({ cart }) {
     const [user, setUser ] = useState({ name: '', email: '', address: '' });
